@@ -51,6 +51,9 @@ class MainActivity : AppCompatActivity() {
 
             }
         });
+        val margin = resources.getDimensionPixelSize(R.dimen.hor_dim_item) // Replace with your margin value
+        val decoration = FirstLastItemMarginDecoration(margin)
+        recyclerView.addItemDecoration(decoration)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
     }
